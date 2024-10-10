@@ -1,5 +1,34 @@
 /* styles.css */
 
+.hero {
+    background-image: url('https://i.postimg.cc/RV7CKm6x/hero-background.jpg'); /* Update this with the path to your background image */
+    background-size: cover; /* This ensures the image covers the entire section */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set the height to full viewport height */
+    position: relative; /* Position relative for the overlay */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color for overlay */
+    z-index: 1; /* Place overlay behind text */
+}
+
+.container {
+    position: relative; /* Position relative for text */
+    z-index: 2; /* Bring text in front of overlay */
+}
+
+.text-white {
+    color: white; /* Ensure text is white */
+}
+
+
 .hover-zoom {
     transition: transform 0.3s ease;
 }
